@@ -1,0 +1,131 @@
+跟着菜鸟教程走 ，www.runoob.com/scala
+
+注意：菜鸟教程只是提供一个思路，至于语言学的多深，需要自己在学的过程中思考，遇到问题时去找资料查
+
+
+
+
+Scala简介：
+
+基于Funnel的工作，Funnel是把函数式编程和Petri网相结合的一种编程语言。
+（所以说，在编程的过程中应该体会这种思想，也就是说Scala怎样把函数式编程和Petri网带入到Scala语言中。）
+
+函数式编程：函数是编程语言中的第一公民，也就是说函数可以当做语言中的变量可以直接使用，这一点不同于java面相对象
+对象的思想，java中是无法直接使用方法操作的，方法必须要有类的存在。例子如下：
+
+    class Foo{
+        pulic void foo(){}
+    }
+
+    在程序中，foo不能再接存在，也就是说你不能直接使用foo来进行操作；而是要new Foo().foo 来使用。前者则是函数式编程的思想，直接使用函数操作
+
+    如果是函数式编程的话，你可以在代码中这样写
+
+          var f = foo ;
+
+          f() ;
+
+          这样函数foo就作为一等公民被赋值给f。函数也可以有赋值运算，这在之前的java中是不存在的。
+
+
+Scala特性：
+        1）面向对象oop
+        2）函数式编程
+        3）静态类型
+        4）扩展性：Scala的设计秉承一项事实，某个领域特定的应用程序开发往往需要特定于该领域的语言扩展。Scala提供了许多独特的语言机制，
+        可以以库的形式无缝添加新的语言结构：
+
+        4.1 任何方法可以用作前缀或后缀操作符
+        4.2 可以根据预期类型自动构造闭包
+
+        5) 并发性
+
+            Scala使用Actor作为其并发模型，Actor是类似线程的实体，通过邮箱收发消息。Actor可以复用线程。因此可以在程序中所以用数百万个Actor，
+            而线程只有上千个。
+
+
+     缺点：Scala文件编译时间太长了！！！
+
+
+
+
+Scala怎么体现函数式编程：
+        我们说过函数式编程是把函数当成程序中的一个元素。而Scala中函数的定义如下：
+
+        def  main(args : Array[String]) : Unit = { // method body //}
+
+        上述的定义可以转换成如下的结构 ：　标识符 名字 = 值 ，这个和普通的变量定义没有区别，基本遵循
+        一个普遍的道理：　啥　　是　　啥
+
+
+Scala中的import
+
+import java.awt.Color // 引入单个类
+import java.awt._ 引入包内所有的成员
+
+例子：
+    def handler(event : event.ActionEvent) : Unit ={}
+
+注意： import语句可以出现任何地方，而不是只能出现在文件的顶部。import的效果从开始延伸到语句块的结束。
+这可以大幅减少名称冲突的可能性。
+
+如果想要引入包内的几个成员，可以使用选择器 “{}”
+
+import java.awt.{Color , Font}
+
+所以应用上面的语法，可以简化下面的引用
+
+import java.net.ContentHandler
+import java.net.HostPortrange
+import java.net.URL
+
+可以改写成
+import java.net.{ContentHandler , HostPortrange ,URL}
+
+
+import java.util.{HashMap => JavaHashMap} //重命名成员
+
+import java.util.{HashMap => _, _} // 引入了util包下的所有成员，但是就是没有引入HashMap
+                                   // HashMap被隐藏了
+
+注意： 默认情况下，Scala总会引入java.lang._ , scala._ 和Predef._ ， 这里也能解释，为什么
+以scala开头的包，在使用时都是省去“scala.”的
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
