@@ -1,0 +1,23 @@
+Scala访问控制符
+
+private public protected
+
+如果没有指定private限定符，默认情况下，Scala对象的访问级别是public
+
+Scala中的private，比java更严格，在嵌套类情况下，外层类甚至不能访问被嵌套的私有成员
+
+
+Scala中的protected，比java也严格一点，它只允许定义了该成员的类的子类中被访问。也就是
+说只能在子类中被访问
+
+
+
+作用域保护：
+Scala中，访问修饰符可以通过使用限定词强调。格式为
+
+private[x]
+protected[x]
+
+其中x指代某个所属的包，类或单例对象。如果写成private[x],读作“这个成员除了对[...]中的类或[...]中的包
+中的类及它们的伴生对象可见外，对其它所有类都是private”
+

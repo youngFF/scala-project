@@ -1,0 +1,20 @@
+Scala中没有break语句，但是你在Scala2.8版本后可以使用另外一种方式来实现break语句。
+
+eg ：
+
+import scala.util.control._
+
+
+// 创建breaks对象
+val loop = new Breaks
+
+
+// 在breakable中循环
+loop.breakable{
+    // 循环
+    for(...){
+
+     // 中断循环
+     loop.break ;
+    }
+}
