@@ -1,0 +1,28 @@
+scala变量：
+
+
+var 为变量 ， val 为常量
+
+eg ：
+
+
+var myVar : String  = "foo"
+var myVar : Int = 5
+
+
+语法格式：
+
+var variableName : DataType = [ = initial value]  //变量声明
+
+
+val variableName : DataType = [ = initial value] // 常量声明
+
+
+变量类型引用： 在scala中声明变量和常量不一定要指明数据类型，在没有指明数据类型的情况下，其数据类型
+是通过变量或常量的初始值判断出来的。
+
+var myVar = 10
+var myVal = "hello world"
+
+中myVar类型为Int , myVal类型为String
+

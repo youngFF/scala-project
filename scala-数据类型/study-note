@@ -1,0 +1,34 @@
+Scala数据类型：
+
+
+Boolean/1 Byte/1 Short/2 Char/2 Int/4 Float/4 Double/8 String   // 基本数据类型，字节数一次增大
+
+
+
+Unit  : 表示无值 ， void类型 。Unit只有一个实例，写成"()"
+
+Null ： null或空引用。注意这个Null有两个作用，既可以写作null，也可以当成空引用
+
+Nothing : Nothing类型在Scala类层级的最低端；它是所有其它类型的子类型。
+
+Any ： 是所有其它类型的父类型
+
+AnyRef : AnyRef类是scala里所有引用类的基类
+
+
+Nothing,Any就像是高等数学中的，上确界和下确界的概念一样，如下：
+
+    -------------Any-------------------------------  // 所有其他类的超类 ， 上确界
+
+         /////  其它类型  //////
+
+
+
+    -------------Nothing--------------------------- // 所有其它类的子类，下确界
+
+
+上表中列出的数据类型都是对象，也就是说scala中没有java中的原生类型(int ,float , double...)。
+
+
+多行字符串的表示方法：用""" this is multi string line """
+
