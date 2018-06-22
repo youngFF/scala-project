@@ -1,0 +1,17 @@
+
+
+//定义List
+val x = List(1,2,3,4)
+
+//定义Set
+val x = Set(1,2,3,4)
+
+//定义Map
+val x = Map("A" -> 1 , "B" -> 2 , "C" -> 3)
+
+//定义元组，可以存放不同的元素
+val x = (10 , "Runoob")
+
+//定义Option
+val x:Option[Int] = Some(5)
+
